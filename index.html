@@ -67,6 +67,7 @@
             font-weight: 600;
             letter-spacing: 1px;
             text-transform: uppercase;
+            white-space: nowrap;
         }
 
         .nav {
@@ -95,11 +96,22 @@
             border: 1px solid var(--text-dark);
             border-radius: 20px;
             transition: all 0.2s;
+            white-space: nowrap;
         }
 
         .phone-btn:hover {
             background-color: var(--text-dark);
             color: var(--text-light);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-dark);
+            padding: 4px;
         }
 
         /* Hero Section (1 блок) */
@@ -230,7 +242,7 @@
         }
 
         .section-header h2 {
-            font-size: 52px; /* Увеличено */
+            font-size: 52px;
             font-weight: 500;
             margin-bottom: 16px;
             line-height: 1.1;
@@ -372,7 +384,7 @@
         .partner-details { text-align: left; margin-bottom: 24px; font-size: 14px; color: var(--text-muted); line-height: 1.8; }
         .partner-details div { margin-bottom: 8px; }
 
-        /* Form Block (Перемещён вниз) */
+        /* Form Block */
         .footer-form { background-color: #ffffff; padding: 100px 0 120px 0; }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
         .form-info h2 { font-size: 32px; font-weight: 500; margin-bottom: 20px; }
@@ -385,7 +397,32 @@
 
         /* Responsive */
         @media (max-width: 992px) {
-            .nav { display: none; }
+            .mobile-menu-toggle { display: block; }
+            .nav {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                flex-direction: column;
+                gap: 0;
+                padding: 20px 0;
+                border-bottom: 1px solid var(--border-color);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+                transform: translateY(-10px);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.25s ease;
+                z-index: 999;
+            }
+            .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            .nav-link { padding: 14px 24px; font-size: 16px; text-align: center; border-bottom: 1px solid #f1f3f5; }
+            .nav-link:last-child { border-bottom: none; }
+            
             .products-grid, .products-grid.two-cols { grid-template-columns: repeat(2, 1fr); }
             .form-grid { grid-template-columns: 1fr; gap: 40px; }
             .block2-wrapper { grid-template-columns: 1fr; }
@@ -397,6 +434,8 @@
             .emotional-block h2 { font-size: 32px; }
             .final-block h2 { font-size: 32px; }
             .engineering-quote { font-size: 20px; }
+            
+            .phone-btn { padding: 6px 12px; font-size: 13px; }
         }
 
         @media (max-width: 768px) {
@@ -407,6 +446,9 @@
             .block2-img { height: 240px; }
             .engineering-img { height: 320px; }
             .section-header h2 { font-size: 32px; }
+            .header-inner { gap: 8px; }
+            .phone-btn { padding: 5px 10px; font-size: 12px; }
+            .logo { font-size: 16px; }
         }
     </style>
 </head>
@@ -423,7 +465,8 @@
                     <a href="#furnitura" class="nav-link">Фурнитура</a>
                     <a href="#about" class="nav-link">О нас</a>
                 </nav>
-                <a href="tel:8123456789" class="phone-btn">позвонить 89871000100 </a>
+                <a href="tel:8123456789" class="phone-btn">8123456789 позвонить</a>
+                <button class="mobile-menu-toggle" aria-label="Открыть меню">☰</button>
             </div>
         </div>
     </header>
@@ -720,6 +763,23 @@
             </div>
         </div>
     </section>
+
+    <script>
+        // Мобильное меню
+        const burger = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav');
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+        // Закрывать меню при клике на ссылку
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                burger.textContent = '☰';
+            });
+        });
+    </script>
 
 </body>
 </html>
