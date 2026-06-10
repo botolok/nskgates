@@ -335,6 +335,12 @@
             justify-content: space-between;
             min-height: 380px;
             background: #ffffff;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
         .product-info h4 { font-size: 20px; font-weight: 500; margin-bottom: 16px; }
@@ -501,9 +507,9 @@
             <div class="header-inner">
                 <div class="logo">Нефтекамские ворота</div>
                 <nav class="nav">
-                    <a href="#vorota" class="nav-link">Ворота</a>
-                    <a href="#automatika" class="nav-link">Автоматика</a>
                     <a href="#furnitura" class="nav-link">Фурнитура</a>
+                    <a href="#automatika" class="nav-link">Автоматика</a>
+                    <a href="#vorota" class="nav-link">Ворота</a>
                     <a href="#about" class="nav-link">О нас</a>
                 </nav>
                 <a href="tel:8123456789" class="phone-btn"><span>т. 8-987-1000-100 </span></a>
@@ -513,9 +519,7 @@
     </header>
 
     <section class="hero">
-        <div class="hero-bg">
-            
-        </div>
+        <div class="hero-bg"></div>
         <div class="container">
             <div class="hero-meta">Профессиональное обустройство въезда</div>
             <h1>Воротные системы, рассчитанные на годы спокойной эксплуатации</h1>
@@ -525,13 +529,12 @@
     </section>
 
     <section class="block2-section">
-        <div class="block2-bg">
-                    </div>
+        <div class="block2-bg"></div>
         <div class="container">
             <div class="block2-wrapper">
                 <div class="block2-text">
                     <h2>Хорошие ворота<br>не требуют внимания</h2>
-                    <p>О они работают тихо, плавно и предсказуемо — каждый день, в любое время года.</p>
+                    <p>Они работают тихо, плавно и предсказуемо — каждый день, в любое время года.</p>
                     <p>Надёжность начинается с качества комплектующих, точности монтажа и инженерного подхода к каждой детали.</p>
                 </div>
                 <div class="block2-img">
@@ -549,133 +552,125 @@
         </div>
     </section>
 
-    <section id="vorota" class="section" style="padding-top: 0;">
+    <!-- ФУРНИТУРА -->
+    <section id="furnitura" class="section" style="padding-top: 0;">
         <div class="container">
             <div class="catalog-header">
-                <h2>Комплекты откатных ворот</h2>
-                <p>Современные решения для частных домов и коммерческих объектов.</p>
+                <h2>Фурнитура</h2>
+                <p>Надёжность системы начинается с точного расчёта комплектующих.</p>
             </div>
             
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-info">
-                        <h4>Комплект «Оптима»</h4>
-                        <div class="product-price">от 45 000 ₽</div>
+                        <h4>Комплект «Стандарт»</h4>
+                        <div class="product-price">11 000 ₽</div>
                         <ul class="product-specs">
-                            <li>Проем: до 4 м</li>
-                            <li>Вес полотна: до 400 кг</li>
-                            <li>Базовая жесткость каркаса</li>
+                            <li>Для проемов шириной до 4 м</li>
+                            <li>Расчетная нагрузка до 400 кг</li>
+                            <li>Базовый ресурс и точная геометрия</li>
                         </ul>
                     </div>
-                    <a href="#contacts" class="btn btn-outline">Заказать</a>
+                    <a href="https://avtomatika-vorota.ru/catalog/komplektuyushchie_dlya_vorot/komplektuyushchie_dlya_otpatnyh_vorot/14605/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Подробнее</a>
                 </div>
                 <div class="product-card">
                     <div class="product-info">
-                        <h4>Комплект «Мастер»</h4>
-                        <div class="product-price">от 60 000 ₽</div>
+                        <h4>Комплект «Де Люкс»</h4>
+                        <div class="product-price">13 000 ₽</div>
                         <ul class="product-specs">
-                            <li>Проем: до 5.5 м</li>
-                            <li>Вес полотна: до 600 кг</li>
-                            <li>Усиленная шина</li>
+                            <li>Для проемов шириной до 5 м</li>
+                            <li>Расчетная нагрузка до 600 кг</li>
+                            <li>Усиленные роликовые опоры</li>
                         </ul>
                     </div>
-                    <a href="#contacts" class="btn btn-outline">Заказать</a>
+                    <a href="https://avtomatika-vorota.ru/catalog/komplektuyushchie_dlya_vorot/komplektuyushchie_dlya_otpatnyh_vorot/14606/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Подробнее</a>
                 </div>
                 <div class="product-card">
                     <div class="product-info">
-                        <h4>Комплект «Профи»</h4>
-                        <div class="product-price">от 85 000 ₽</div>
+                        <h4>Комплект «Премиум»</h4>
+                        <div class="product-price">15 000 ₽</div>
                         <ul class="product-specs">
-                            <li>Проем: от 6 м</li>
-                            <li>Вес полотна: от 800 кг</li>
-                            <li>Для интенсивных нагрузок</li>
+                            <li>Для проемов шириной до 6 м</li>
+                            <li>Расчетная нагрузка до 800 кг</li>
+                            <li>Оцинкованная шина и стальные ролики</li>
                         </ul>
                     </div>
-                    <a href="#contacts" class="btn btn-outline">Заказать</a>
+                    <a href="https://ufa.avtomatika-vorota.ru/catalog/komplektuyushchie_dlya_vorot/komplektuyushchie_dlya_otpatnyh_vorot/komplekt_s_neocinkovannoy_shinoy_sg01_i_stalnymi_rolikami_5_3m/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Подробнее</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- АВТОМАТИКА -->
     <section id="automatika" class="section">
         <div class="container">
             <div class="catalog-header">
                 <h2>Автоматика</h2>
-                <p>Плавная и комфортная работа каждый день.</p>
+                <p>Плавная, предсказуемая работа в любом климате.</p>
             </div>
 
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-info">
-                        <h4>Привод серии 400</h4>
-                        <div class="product-price">28 000 ₽</div>
+                        <h4>Привод серии 800 «Индустрия»</h4>
+                        <div class="product-price">13 050 ₽</div>
                         <ul class="product-specs">
-                            <li>Вес ворот: до 400 кг</li>
-                            <li>Для частного сектора</li>
-                            <li>Встроенный блок защиты</li>
+                            <li>Вес ворот: до 800 кг</li>
+                            <li>Интенсивный режим эксплуатации</li>
+                            <li>Встроенная плата защиты двигателя</li>
                         </ul>
                     </div>
-                    <a href="#contacts" class="btn btn-outline">Заказать</a>
+                    <a href="https://avtomatika-vorota.ru/catalog/avtomatika_dlya_vorot/avtomatika_dlya_otpatnyh_vorot/14218/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Подробнее</a>
                 </div>
                 <div class="product-card">
                     <div class="product-info">
-                        <h4>Привод серии 600</h4>
-                        <div class="product-price">34 000 ₽</div>
-                        <ul class="product-specs">
-                            <li>Вес ворот: до 600 кг</li>
-                            <li>Интенсивность: средняя</li>
-                            <li>Магнитные концевики</li>
-                        </ul>
-                    </div>
-                    <a href="#contacts" class="btn btn-outline">Заказать</a>
-                </div>
-                <div class="product-card">
-                    <div class="product-info">
-                        <h4>Привод серии 1000</h4>
-                        <div class="product-price">48 000 ₽</div>
+                        <h4>Привод DMSL-1000 «Титан»</h4>
+                        <div class="product-price">16 350 ₽</div>
                         <ul class="product-specs">
                             <li>Вес ворот: до 1000 кг</li>
-                            <li>Высокая интенсивность</li>
-                            <li>Для тяжелых систем</li>
+                            <li>Магнитные концевики хода</li>
+                            <li>Промышленный класс пылезащиты</li>
                         </ul>
                     </div>
-                    <a href="#contacts" class="btn btn-outline">Заказать</a>
+                    <a href="https://vgorode.pro/product/915128/komplekt-privoda-dlya-sdvizhnyh-vorot-dmsl-1000?ysclid=mq7p30kj7d373031047" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Подробнее</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-info">
+                        <h4>Зубчатые рейки</h4>
+                        <div class="product-price">от 400 ₽</div>
+                        <ul class="product-specs">
+                            <li>Усиленный композит / оцинкованная сталь</li>
+                            <li>Стандартный шаг зуба 10 мм</li>
+                            <li>Универсальное зацепление</li>
+                        </ul>
+                    </div>
+                    <a href="https://avtomatika-vorota.ru/catalog/avtomatika_dlya_vorot/avtomatika_dlya_otpatnyh_vorot/13351/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Подробнее</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="furnitura" class="section">
+    <!-- ВОРОТА -->
+    <section id="vorota" class="section">
         <div class="container">
             <div class="catalog-header">
-                <h2>Фурнитура</h2>
-                <p>Надёжность системы начинается с деталей.</p>
+                <h2>Ворота под ключ</h2>
+                <p>Комплексное решение: от точного замера до чистового монтажа.</p>
             </div>
-
+            
+            <!-- Используем two-cols, чтобы единственная карточка выглядела солидно и занимала 50% ширины -->
             <div class="products-grid two-cols">
                 <div class="product-card">
                     <div class="product-info">
-                        <h4>Направляющие узлы «S»</h4>
-                        <div class="product-price">15 000 ₽</div>
+                        <h4>Откатные ворота «Под ключ»</h4>
+                        <div class="product-price">от 65 000 ₽</div>
                         <ul class="product-specs">
-                            <li>Нагрузка: до 450 кг</li>
-                            <li>Оцинкованная балка (6 м)</li>
-                            <li>Подшипники с низкотемпературной смазкой</li>
+                            <li>Каркас из калиброванной профильной трубы</li>
+                            <li>Антикоррозийная подготовка и окраска</li>
+                            <li>Точная геометрия и профессиональный монтаж</li>
                         </ul>
                     </div>
-                    <a href="#contacts" class="btn btn-outline">Заказать</a>
-                </div>
-                <div class="product-card">
-                    <div class="product-info">
-                        <h4>Направляющие узлы «L»</h4>
-                        <div class="product-price">24 000 ₽</div>
-                        <ul class="product-specs">
-                            <li>Нагрузка: до 800 кг</li>
-                            <li>Толщина стали направляющей: 5 мм</li>
-                            <li>Усиленные роликовые опоры</li>
-                        </ul>
-                    </div>
-                    <a href="#contacts" class="btn btn-outline">Заказать</a>
+                    <a href="#contacts" class="btn btn-outline">Заказать расчет</a>
                 </div>
             </div>
         </div>
